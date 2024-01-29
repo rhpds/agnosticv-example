@@ -1,0 +1,12 @@
+---
+purpose: test
+
+__meta__:
+  catalog:
+    # Don't put test catalog item in production catalog
+    namespace: babylon-catalog-test
+  deployer:
+    execution_environment:
+      image: quay.io/agnosticd/ee-multicloud:v0.1.1
+      pull: missing
+    scm_ref: test-empty-config-0.5.5

@@ -1,0 +1,16 @@
+---
+#include /includes/ansible_control_plane.yaml
+
+__meta__:
+  deployer:
+    scm_type: git
+    scm_url: https://github.com/redhat-cop/agnosticd.git
+    type: agnosticd
+  secrets:
+  # A OpenShift secret named "vault-credentials" must be in each Anarchy namespace
+  # The secret should have data item with a name that matches the vault id used to
+  # protect the credentials.
+  #
+  # In these example the vault secret id is "example" with vault secret "secret"
+  - name: vault-credentials
+    var: vault_credentials

@@ -1,0 +1,11 @@
+---
+__meta__:
+  ansible_control_plane:
+    type: controller
+    # The secret "aap2-example-com" must exist in each Anarchy namespace.
+    # The secret needs to have data items "hostname", "user", and "password".
+    # The user needs to have access admin level access to the ansible control plane.
+    # Additionally the secret must have the label "babylon.gpte.redhat.com/ansible-control-plane"
+    # with a value of the hostname.
+    secret: aap2-example-com
+...
